@@ -9,7 +9,7 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
         <rollback/>
     </changeSet>
 
-    <changeSet id="update-client" author="ECHasov">
+    <changeSet id="update-clients" author="ECHasov">
         <sqlFile encoding="utf8" path="/db/changelog/2024/09/16-01-changelog-02.sql"/>
         <rollback/>
     </changeSet>
@@ -17,7 +17,7 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
         <createSequence incrementBy="50" sequenceName="transaction_seq" startValue="1"/>
     </changeSet>
     <changeSet id="1727272690521-2" author="e_cha (generated)">
-        <createTable tableName="transaction">
+        <createTable tableName="transactions">
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_transaction"/>
             </column>
@@ -25,6 +25,16 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
             <column name="client_id" type="BIGINT"/>
         </createTable>
     </changeSet>
+    <changeSet id="1728034559859-1" author="Ilyas">
+        <createTable tableName="accounts">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_accounts"/>
+            </column>
+            <column name="account_type" type="VARCHAR(255)"/>
+            <column name="balance" type="DECIMAL(19, 2)"/>
+        </createTable>
+    </changeSet>
+
 
 
 </databaseChangeLog>

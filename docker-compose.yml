@@ -3,13 +3,26 @@ version: '1.0'
 services:
 
   postgres:
-    image: postgres:11.13
-    container_name: t1_java_demo
-    ports:
-      - "5432:5432"
+    restart: always
+    container_name: "t1_java_demo"
+    hostname: postgres
+    image: postgres:16.1-alpine
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=0000
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres2"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5999:5432"
+
+#  postgres:
+#    image: postgres:11.13
+#    container_name: t1_java_demo
+#    ports:
+#      - "5432:5432"
+#    environment:
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=0000
   zookeeper_t1:
     image: confluentinc/cp-zookeeper:5.5.0
     hostname: zookeeper_t1
