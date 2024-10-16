@@ -21,6 +21,7 @@ import java.util.List;
 public class KafkaClientConsumer {
 
     private final ClientService clientService;
+    private final ru.t1.java.demo.mapper.ClientMapper mapper;
 
     @KafkaListener(id = "${t1.kafka.consumer.group-id}" + "-client",
             topics = "${t1.kafka.topic.client_registration}",
@@ -35,7 +36,8 @@ public class KafkaClientConsumer {
             List<Client> clients = messageList.stream()
                     .map(dto -> {
                         dto.setFirstName(key + "@" + dto.getFirstName());
-                        return ClientMapper.toEntity(dto);
+                        return mapper.toEntity(dto);
+                     //   return ClientMapper.toEntity(dto);
                     })
                     .toList();
             clientService.registerClients(clients);

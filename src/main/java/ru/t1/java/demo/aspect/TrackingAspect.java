@@ -24,7 +24,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @Component
 @RequiredArgsConstructor
 public class TrackingAspect {
-    private final KafkaTemplate<String, Object> kafkaTemplate;
+  //  private final KafkaTemplate<String, Object> kafkaTemplate;
     @Value("${t1.method_execution_time}")
     private long methodExecutionTimeThresholdMs;
     @Value("${t1.kafka.topic.metric_trace}")
@@ -74,7 +74,7 @@ public class TrackingAspect {
         metricData.put("executionTime", executionTime);
         metricData.put("parameters", args);
 
-        kafkaTemplate.send(metricTraceTopic, metricData);
+      //  kafkaTemplate.send(metricTraceTopic, metricData);
     }
 }
 
