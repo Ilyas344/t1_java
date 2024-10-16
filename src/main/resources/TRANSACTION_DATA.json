@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "amount": 100.00,
+    "clientId": 1
+  },
+  {
+    "id": 3,
+    "amount": -50.00,
+    "clientId": 2
+  },
+  {
+    "id": 44,
+    "amount": 200.00,
+    "clientId": 3
+  },
+  {
+    "id": 55,
+    "amount": -100.00,
+    "clientId": 4
+  },
+  {
+    "id": 66,
+    "amount": 300.00,
+    "clientId": 5
+  },
+  {
+    "id": 77,
+    "amount": -150.00,
+    "clientId": 6
+  },
+  {
+    "id": 88,
+    "amount": 400.00,
+    "clientId": 7
+  },
+  {
+    "id": 99,
+    "amount": -200.00,
+    "clientId": 8
+  },
+  {
+    "id": 999,
+    "amount": 500.00,
+    "clientId": 9
+  },
+  {
+    "id": 888,
+    "amount": -250.00,
+    "clientId": 10
+  },
+  {
+    "id": 887,
+    "amount": 600.00,
+    "clientId": 11
+  },
+  {
+    "id": 777,
+    "amount": -300.00,
+    "clientId": 12
+  },
+  {
+    "id": 6666,
+    "amount": 700.00,
+    "clientId": 13
+  },
+  {
+    "id": 5555,
+    "amount": -350.00,
+    "clientId": 14
+  },
+  {
+    "id": 55555,
+    "amount": 800.00,
+    "clientId": 15
+  },
+  {
+    "id": 456,
+    "amount": -400.00,
+    "clientId": 16
+  },
+  {
+    "id": 4562,
+    "amount": 900.00,
+    "clientId": 17
+  },
+  {
+    "id": 23,
+    "amount": -450.00,
+    "clientId": 18
+  },
+  {
+    "id": 57,
+    "amount": 1000.00,
+    "clientId": 19
+  },
+  {
+    "id": 56,
+    "amount": -500.00,
+    "clientId": 20
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "accountType": "DEBIT",
+    "balance": 1000.00
+  },
+  {
+    "id": 2,
+    "accountType": "CREDIT",
+    "balance": -500.00
+  },
+  {
+    "id": 3,
+    "accountType": "DEBIT",
+    "balance": 2000.00
+  },
+  {
+    "id": 4,
+    "accountType": "CREDIT",
+    "balance": -1000.00
+  },
+  {
+    "id": 5,
+    "accountType": "DEBIT",
+    "balance": 3000.00
+  },
+  {
+    "id": 6,
+    "accountType": "CREDIT",
+    "balance": -2000.00
+  },
+  {
+    "id": 7,
+    "accountType": "DEBIT",
+    "balance": 4000.00
+  },
+  {
+    "id": 8,
+    "accountType": "CREDIT",
+    "balance": -3000.00
+  },
+  {
+    "id": 9,
+    "accountType": "DEBIT",
+    "balance": 5000.00
+  },
+  {
+    "id": 10,
+    "accountType": "CREDIT",
+    "balance": -4000.00
+  },
+  {
+    "id": 11,
+    "accountType": "DEBIT",
+    "balance": 9000.00
+  },
+  {
+    "id": 12,
+    "accountType": "CREDIT",
+    "balance": -9000.00
+  },
+  {
+    "id": 13,
+    "accountType": "DEBIT",
+    "balance": 8000.00
+  },
+  {
+    "id": 14,
+    "accountType": "CREDIT",
+    "balance": -8000.00
+  },
+  {
+    "id": 15,
+    "accountType": "DEBIT",
+    "balance": 7000.00
+  },
+  {
+    "id": 16,
+    "accountType": "CREDIT",
+    "balance": -7000.00
+  },
+  {
+    "id": 17,
+    "accountType": "DEBIT",
+    "balance": 6000.00
+  },
+  {
+    "id": 18,
+    "accountType": "CREDIT",
+    "balance": -6000.00
+  },
+  {
+    "id": 19,
+    "accountType": "DEBIT",
+    "balance": 5000.00
+  },
+  {
+    "id": 20,
+    "accountType": "CREDIT",
+    "balance": -5000.00
+  },
+  {
+    "id": 21,
+    "accountType": "DEBIT",
+    "balance": 4000.00
+  },
+  {
+    "id": 22,
+    "accountType": "CREDIT",
+    "balance": -4000.00
+  },
+  {
+    "id": 23,
+    "accountType": "DEBIT",
+    "balance": 1000.00
+  },
+  {
+    "id": 24,
+    "accountType": "CREDIT",
+    "balance": -1000.00
+  },
+  {
+    "id": 25,
+    "accountType": "DEBIT",
+    "balance": 5000.00
+  },
+  {
+    "id": 26,
+    "accountType": "CREDIT",
+    "balance": 2500.50
+  },
+  {
+    "id": 29,
+    "accountType": "DEBIT",
+    "balance": 10000.75
+  },
+  {
+    "id": 35,
+    "accountType": "CREDIT",
+    "balance": 7890.25
+  },
+  {
+    "id": 36,
+    "accountType": "DEBIT",
+    "balance": 3456.78
+  },
+  {
+    "id": 99,
+    "accountType": "CREDIT",
+    "balance": 9876.54
+  }
+]

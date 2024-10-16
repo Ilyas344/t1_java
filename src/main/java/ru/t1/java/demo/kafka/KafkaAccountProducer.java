@@ -2,6 +2,7 @@ package ru.t1.java.demo.kafka;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +11,7 @@ import java.util.UUID;
 @Slf4j
 @RequiredArgsConstructor
 @Component
-public class KafkaClientProducer {
+public class KafkaAccountProducer {
 
     private final KafkaTemplate<String, Object> template;
 
@@ -25,7 +26,7 @@ public class KafkaClientProducer {
 
     public void sendTo(String topic, Object o) {
         try {
-            template.send(topic, o).get();
+            template.send(topic, o);
             template.flush();
         } catch (Exception ex) {
             log.error(ex.getMessage(), ex);
