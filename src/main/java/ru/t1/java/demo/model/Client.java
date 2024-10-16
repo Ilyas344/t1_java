@@ -12,7 +12,7 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "client")
+@Table(name = "clients")
 public class Client extends AbstractPersistable<Long> {
 
     @Column(name = "first_name")

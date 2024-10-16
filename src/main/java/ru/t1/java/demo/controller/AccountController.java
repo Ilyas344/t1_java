@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.t1.java.demo.aspect.annotation.HandlingResult;
 import ru.t1.java.demo.aspect.annotation.LogException;
 import ru.t1.java.demo.aspect.annotation.Track;
-import ru.t1.java.demo.kafka.KafkaClientProducer;
-import ru.t1.java.demo.model.dto.ClientDto;
+import ru.t1.java.demo.kafka.KafkaAccountProducer;
+import ru.t1.java.demo.model.dto.AccountDto;
 import ru.t1.java.demo.service.ParseService;
 
 import java.util.List;
@@ -18,13 +18,12 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @Slf4j
-@RequestMapping("api/v1/client")
-public class ClientController {
+@RequestMapping("api/v1/account")
+public class AccountController {
+    private final ParseService<AccountDto> accountService;
 
-    private final ParseService<ClientDto> clientService;
-
-    private final KafkaClientProducer kafkaClientProducer;
-    @Value("${t1.kafka.topic.client_registration}")
+    private final KafkaAccountProducer kafkaAccountProducer;
+    @Value("${t1.kafka.topic.account}")
     private String topic;
 
     @LogException
@@ -32,10 +31,10 @@ public class ClientController {
     @GetMapping(value = "/parse")
     @HandlingResult
     public void parseSource() {
-        List<ClientDto> clientDtos = clientService.parseJson("MOCK_DATA", ClientDto[].class);
-        clientDtos.forEach(dto -> {
-            kafkaClientProducer.sendTo(topic, dto);
+        List<AccountDto> accountDtos = accountService.parseJson("ACCOUNT_DATA", AccountDto[].class);
+        System.out.println(accountDtos);
+        accountDtos.forEach(dto -> {
+            kafkaAccountProducer.sendTo(topic, dto);
         });
     }
-
 }
