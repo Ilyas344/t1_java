@@ -19,7 +19,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class ExceptionTracingAspect {
 
-    private final KafkaTemplate<Object, Object> kafkaTemplate;
+    private final KafkaTemplate<String, Object> kafkaTemplate;
     @Value("${t1.kafka.topic.error_trace")
     private String errorTraceTopic;
 
@@ -43,6 +43,6 @@ public class ExceptionTracingAspect {
         errorData.put("parameters", args);
         errorData.put("stackTrace", throwable.getStackTrace());
 
-        kafkaTemplate.send(errorTraceTopic, errorData);
+        //  kafkaTemplate.send(errorTraceTopic, errorData);
     }
 }

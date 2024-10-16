@@ -12,7 +12,7 @@ import java.util.UUID;
 @Component
 public class KafkaTransactionProducer {
 
-    private final KafkaTemplate<Object, Object> template;
+    private final KafkaTemplate<String, Object> template;
 
     public void send(Long id) {
         try {
