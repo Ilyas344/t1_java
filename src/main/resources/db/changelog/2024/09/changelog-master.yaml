@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - includeAll:
+      path: /Changelog
+      author: Pro100
+      relativeToChangelogFile: true
+
+

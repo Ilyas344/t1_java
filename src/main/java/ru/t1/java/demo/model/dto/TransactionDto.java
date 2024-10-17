@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.t1.java.demo.model.TransactionType;
 
 import java.math.BigDecimal;
 
@@ -25,4 +26,10 @@ public class TransactionDto {
     private BigDecimal amount;
     @JsonProperty("clientId")
     private Long clientId;
+    @JsonProperty("accountId")
+    private Long accountId;
+    @JsonProperty("transactionType")
+    private TransactionType transactionType;
+    @JsonProperty("processed")
+    private Boolean processed;
 }
